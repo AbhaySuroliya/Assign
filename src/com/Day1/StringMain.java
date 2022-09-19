@@ -1,4 +1,4 @@
-package com.string;
+package com.Day1;
 import java.util.Scanner;
 public class StringMain {
 

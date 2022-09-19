@@ -1,4 +1,4 @@
-package com.arrayMatrix;
+package com.Day1;
 import java.util.Scanner;
 public class Matrix {	
 	public static void main(String[] args) {
