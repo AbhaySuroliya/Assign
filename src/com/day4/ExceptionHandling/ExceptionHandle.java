@@ -20,11 +20,11 @@ public class ExceptionHandle {
 				int n=scan.nextInt();
 				System.out.println("The Price of the Item is: "+arr[n]);
 			}
-			catch(Exception e) {
+			catch(ArrayIndexOutOfBoundsException e) {
 				System.out.println("Please Enter valid Index! ");
 			}
 		}
-		catch(Exception ex) {
+		catch(InputMismatchException ex) {
 			System.out.println("Please Enter Integer type!");
 		}
 	}
