@@ -6,76 +6,78 @@ import com.Day6.Simulator_Phonebook.Simulator_Operations;
 public class PhonebookMain {
 
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
+		Scanner scan=new Scanner(System.in);
 		 try{
-			 Simulator_Operations op=new Simulator_Operations();
+			 Simulator_Operations opera=new Simulator_Operations();
 				while(true)
 				{
-				System.out.println("Welcome to PhoneBook");
+				System.out.println("---------PhoneBook Simulator---------");
+				System.out.println("Please select Operation from below menu");
 				System.out.println("1.Add Contact");
 				System.out.println("2.View Contact");
 				System.out.println("3.Search Contact by name");
 				System.out.println("4.Search Contact by number");
-				System.out.println("5.delete contact");
+				System.out.println("5.Delete contact");
 				System.out.println("6.Exit");
-			    int n=sc.nextInt();
-			    if(n==1)
+			    int c=scan.nextInt();
+			    if(c==1)
 			     {
 			       try {
 			    	   System.out.println("Enter name");
-			    	   String s=sc.next();
+			    	   String s=scan.next();
 			    	   System.out.println("Enter Contact No.");
-			    	   String con=sc.next();
-			    	   if(op.validate(con))
-			    		   op.add(s,con);
+			    	   String con=scan.next();
+			    	   if(opera.validate(con))
+			    		   opera.addContact(s,con);
 			    	   else {
 			    		   throw new Validate("Enter a valid Number");
 			    	   }
 			       }
-			       catch(Exception e)
+			       catch(Exception exp1)
 			       {
-			    	   e.printStackTrace();
+			    	   exp1.printStackTrace();
 			       }
 			     }
-			    else if(n==2)
+			    else if(c==2)
 			     {
-			    	op.display();
+			    	opera.displayContact();
 			     }
-			    else if(n==3)
+			    else if(c==3)
 			    {
 			    	try {
 			    		System.out.println("Enter Search name");
-			    		String s=sc.next();
-			    		op.searchByName(s);
+			    		String s=scan.next();
+			    		opera.searchByName(s);
 			    	}
-			    	catch(Exception e)
+			    	catch(Exception exp2)
 			    	{
-			    		e.printStackTrace();
+			    		exp2.printStackTrace();
 			    	}
 			    }
-			    else if(n==4)
+			    else if(c==4)
 			    {
 			    	try {
 			    		System.out.println("Enter Search number");
-			    		String s=sc.next();
-			    		op.searchByNumber(s);
+			    		String s=scan.next();
+			    		opera.searchByContact(s);
 			    	}
-			    	catch(Exception e)
+			    	catch(Exception exp3)
 			    	{
-			    		e.printStackTrace();
+			    		exp3.printStackTrace();
 			    	}
 			    }
-			    else if(n==5)
+			    else if(c==5)
 			    {
 			    	System.out.println("Enter number to delete");
-			    	String con=sc.next();
-			    	op.delete(con);
+			    	String con=scan.next();
+			    	opera.delete(con);
 			    }
 			    else 
 			    {
 			    	break;
 			    }
 	            }
+				System.out.println("Thank You!!");
 			}
 		    catch(Exception e){
 		    	e.printStackTrace();

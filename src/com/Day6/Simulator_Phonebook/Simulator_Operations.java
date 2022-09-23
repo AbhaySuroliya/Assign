@@ -12,19 +12,18 @@ public class Simulator_Operations {
 		return (m.find()&&m.group().equals(con));	
 	}
 
-	public void add(String s, String con) {
+	public void displayContact() {
+		   for(int i=0;i<list.size();i++)
+			   System.out.println(list.get(i).toString());
+		}
+	public void addContact(String s, String con) {
 		list.add(new Phonebook(s,con));
-	}
-
-	public void display() {
-	   for(int i=0;i<list.size();i++)
-		   System.out.println(list.get(i).toString());
 	}
 
 	public void searchByName(String s) {
 		list.stream().filter(p->p.getName().equalsIgnoreCase(s)).forEach(System.out::println);
 	}
-	public void searchByNumber(String s) {
+	public void searchByContact(String s) {
 		list.stream().filter(p->p.getContact().equalsIgnoreCase(s)).forEach(System.out::println);
 	}
 

@@ -11,6 +11,7 @@ public class E_LearningMain {
 			while(true)
 			{
 			System.out.println("--------eLearning Portal---------");
+			System.out.println("Please select Operation from below menu");
 			System.out.println("1.Add Student");
 			System.out.println("2.Add Course");
 			System.out.println("3.View Courses");
