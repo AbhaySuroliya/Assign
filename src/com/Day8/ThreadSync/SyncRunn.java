@@ -2,9 +2,9 @@ package com.Day8.ThreadSync;
 
 public class SyncRunn implements Runnable{
 	 	String arg;
-	    SharedSyn obj;
+	 	ThreadWithdraw obj;
 	    Thread t;
-	    public SyncRunn(String arg, SharedSyn obj) {
+	    public SyncRunn(String arg, ThreadWithdraw obj) {
 	        super();
 	        this.arg = arg;
 	        this.obj = obj;

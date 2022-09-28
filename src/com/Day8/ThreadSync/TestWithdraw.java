@@ -4,10 +4,10 @@ public class TestWithdraw {
 
 	public static void main(String[] args) {
 		ThreadWithdraw obj=new ThreadWithdraw();
-        WithdrawThread t1=new WithdrawThread(1000,obj);
-        WithdrawThread t2=new WithdrawThread(2000,obj);
-        WithdrawThread t3=new WithdrawThread(4000,obj);
-        WithdrawThread t4=new WithdrawThread(3000,obj);
+		SyncRunn t1=new SyncRunn(1000,obj);
+		SyncRunn t2=new SyncRunn(2000,obj);
+		SyncRunn t3=new SyncRunn(4000,obj);
+		SyncRunn t4=new SyncRunn(3000,obj);
         try
         {
             t1.t.join();

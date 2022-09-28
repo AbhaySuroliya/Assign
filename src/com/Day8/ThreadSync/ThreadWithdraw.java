@@ -1,6 +1,6 @@
 package com.Day8.ThreadSync;
 
-public class ThreadWithdraw throws CusExcep{
+public class ThreadWithdraw throw CusExcep {
 	 int p=10000;
 	    synchronized void shareMethod(int arg)
 	    {
