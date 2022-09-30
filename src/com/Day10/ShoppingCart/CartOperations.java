@@ -35,10 +35,8 @@ public class CartOperations {
 	      }
 	      
 	      public void categorywiseBill() {
-	    	  HashMap<String,CartDetails> temp= itemMap.entrySet().stream().sorted((i1, i2)-> i1.getValue().getCategory().compareTo(i2.getValue().getCategory()))
-	          .collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue,(e1, e2) -> e1, LinkedHashMap::new));
 	            Set<String>set=new HashSet<String>();
-	            for(Map.Entry<String,CartDetails> en: temp.entrySet())
+	            for(Map.Entry<String,CartDetails> en: itemMap.entrySet())
 	         {
 	            	set.add(en.getValue().getCategory());
 	         }
