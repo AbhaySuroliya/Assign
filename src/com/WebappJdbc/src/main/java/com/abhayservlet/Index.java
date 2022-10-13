@@ -2,7 +2,9 @@ package com.abhayservlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,9 +24,15 @@ public class Index extends HttpServlet {
 		JDBCConnection con;
 		try {
 			con = new JDBCConnection();
-			con.insert(new Student("Abhay","0827"));
-		if(con.check(name, pass))
-		 pw.println("Welcome "+name);
+			//con.insert(new Student("Abhay","0827"));
+		if(con.check(name, pass)) {
+			ArrayList <String> list= con.showdata();
+			request.setAttribute("name", list);
+			//pw.println(list);
+			//response.sendRedirect("Display.jsp");
+			RequestDispatcher rd= request.getRequestDispatcher("Display.jsp");
+			rd.forward(request, response);
+		}
 		else
 		{
 		  pw.println("<h4>Login Failed: Try again</h4>");

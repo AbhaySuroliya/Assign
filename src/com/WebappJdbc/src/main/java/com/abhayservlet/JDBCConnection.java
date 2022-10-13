@@ -43,5 +43,15 @@ public class JDBCConnection{
 		 }
 		 return false;
 	 }
+	 public ArrayList<String> showdata() throws SQLException {
+		 PreparedStatement sh=con.prepareStatement("select * from stud_data");
+		 ArrayList <String> lst= new ArrayList <String>();
+		 ResultSet set=sh.executeQuery();
+		 while(set.next())
+		 {
+			lst.add(set.getString(1));
+		 }
+		 return lst;
+	 }
 
 }
