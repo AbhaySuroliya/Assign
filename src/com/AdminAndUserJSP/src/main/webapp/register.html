@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<form action="ServletFile" method="post">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="name" required>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+    <label for="mn"><b>Address</b></label>
+    <input type="text" placeholder="Enter Address" name="add" required>
+    <label for="age"><b>Age</b></label>
+    <input type="text" placeholder="Enter age" name="age" required>
+    <label for="psw"><b>Password</b></label>
+    <input type="text" placeholder="Password" name="pass" required>
+    <label for="type">Choose a Type:</label>
+<select name="type" id="cars">
+  <option value="user">User</option>
+  <option value="admin">Admin</option>
+</select>
+    <div class="clearfix">
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+    <a href="login.html">Login</a>
+  </div>
+</form>
+
+</body>
+</html>
